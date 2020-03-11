@@ -1,0 +1,38 @@
+//plan outline here
+
+ - need to make a socket serverside clients all access to get website urls. Limit to youtube to start
+ - gmod has functions for playing music from urls
+ - client version only needs to connect to socket and if changes detected play song/change song/stop playing
+ 
+ Should Server be able to notify clients of a socket update or do clients need to check? 
+ Should stopping the song delete the url as well? Possibly consider pause function
+ 
+ Functions wanted:
+  Chat Commands:
+  - set song
+  - stop playing
+  
+  //consider these later
+  - queue song
+  - remove from queue
+  - mute song (client only)
+  
+ Server Side Structure:
+  - create socket to hold urls as lines of text
+      one url per line
+  - allow input to socket from connected clients
+  - to start, only one line. New song url can overwrite old url instead of appending
+  
+  //consider later
+  - close socket when no clients
+  - deleted played songs once done
+  
+ 
+ Client Side Structure:
+  - connect to server socket on server join
+  - grab url on top line and use play command (gmod has this command just need to execute it at the right time)
+  - stop song signalled to socket
+  - add song to socket
+ 
+
+ 
