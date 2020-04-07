@@ -1,1 +1,158 @@
-//to update
+//Pages of note on wiki
+
+https://wiki.facepunch.com/gmod/file
+https://wiki.facepunch.com/gmod/Meta_Tables
+https://wiki.facepunch.com/gmod/gui.OpenURL
+https://wiki.facepunch.com/gmod/http
+https://wiki.facepunch.com/gmod/player(library)
+https://wiki.facepunch.com/gmod/player_manager
+https://wiki.facepunch.com/gmod/resource
+https://wiki.facepunch.com/gmod/scripted_ents
+https://wiki.facepunch.com/gmod/sound
+https://wiki.facepunch.com/gmod/sql
+https://wiki.facepunch.com/gmod/string
+https://wiki.facepunch.com/gmod/surface.PlaySound
+https://wiki.facepunch.com/gmod/system
+https://wiki.facepunch.com/gmod/table
+https://wiki.facepunch.com/gmod/team
+https://wiki.facepunch.com/gmod/net
+https://wiki.facepunch.com/gmod/Net_Library_Usage
+https://wiki.facepunch.com/gmod/vgui
+https://wiki.facepunch.com/gmod/util
+
+//Possibly helpful. will see once applied
+https://wiki.facepunch.com/gmod/Global.CreateSound
+CSoundPatch CreateSound( Entity targetEnt, string soundName, CRecipientFilter filter = CPASAttenuationFilter )
+
+https://wiki.facepunch.com/gmod/Global.BroadcastLua
+ BroadcastLua( string code )
+
+https://wiki.facepunch.com/gmod/Global.ClientsideScene
+ CSEnt ClientsideScene( string name, Entity targetEnt )
+
+https://wiki.facepunch.com/gmod/Global.CompileFile
+ function CompileFile( string path )
+
+https://wiki.facepunch.com/gmod/Global.ConVarExists
+ boolean ConVarExists( string name )
+
+https://wiki.facepunch.com/gmod/Global.CreateClientConVar
+ConVar CreateClientConVar( string name, string default, boolean shouldsave = true, boolean userinfo = false, string helptext, number min = nil, number max = nil )
+
+https://wiki.facepunch.com/gmod/Global.CreateConVar
+ConVar CreateConVar( string name, string value, number flags = FCVAR_NONE, string helptext, number min = nil, number max = nil )
+
+https://wiki.facepunch.com/gmod/Global.DebugInfo
+ DebugInfo( number slot, string info )
+
+
+ https://wiki.facepunch.com/gmod/Global.Either
+ any Either( any condition, any truevar, any falsevar )
+
+https://wiki.facepunch.com/gmod/Global.EmitSound
+  EmitSound( string soundName, Vector position, number entity, number channel = CHAN_AUTO, number volume = 1, number soundLevel = 75, number soundFlags = 0, number pitch = 100 )
+
+
+https://wiki.facepunch.com/gmod/Global.EndTooltip
+  EndTooltip( Panel panel )
+
+
+https://wiki.facepunch.com/gmod/Global.Entity
+Entity Entity( number entityIndex )
+
+https://wiki.facepunch.com/gmod/Global.Error
+ Error( vararg arguments )
+
+https://wiki.facepunch.com/gmod/Global.ErrorNoHalt
+  ErrorNoHalt( vararg arguments )
+
+https://wiki.facepunch.com/gmod/Global.GameDetails
+GameDetails( string servername, string serverurl, string mapname, number maxplayers, string steamid, string gamemode )
+
+https://wiki.facepunch.com/gmod/Global.GetConVar
+ConVar GetConVar( string name )
+
+https://wiki.facepunch.com/gmod/Global.GetConVar_Internal
+ConVar GetConVar_Internal( string name )
+
+https://wiki.facepunch.com/gmod/Global.GetGlobalBool
+boolean GetGlobalBool( string index, boolean default = false )
+
+https://wiki.facepunch.com/gmod/Global.GetGlobalEntity
+Entity GetGlobalEntity( string index, Entity default = NULL )
+
+https://wiki.facepunch.com/gmod/Global.GetGlobalFloat
+number GetGlobalFloat( string index, number default = 0 )
+
+https://wiki.facepunch.com/gmod/Global.GetGlobalInt
+number GetGlobalInt( string index, number default = 0 )
+
+https://wiki.facepunch.com/gmod/Global.GetGlobalString
+string GetGlobalString( string index, string default )
+
+https://wiki.facepunch.com/gmod/Global.HTTP
+boolean HTTP( table parameters )
+
+https://wiki.facepunch.com/gmod/Global.include
+vararg include( string fileName )
+
+https://wiki.facepunch.com/gmod/Global.IsFirstTimePredicted
+boolean IsFirstTimePredicted()
+
+https://wiki.facepunch.com/gmod/Global.IsInGame
+boolean IsInGame()
+
+https://wiki.facepunch.com/gmod/Global.isstring
+boolean isstring( any variable )
+
+https://wiki.facepunch.com/gmod/Global.LocalPlayer
+Player LocalPlayer()
+
+https://wiki.facepunch.com/gmod/Global.Msg
+ Msg( vararg args )
+
+https://wiki.facepunch.com/gmod/Global.OpenFolder
+ OpenFolder( string folder )
+
+https://wiki.facepunch.com/gmod/Global.Player
+Player Player( number playerIndex )
+
+https://wiki.facepunch.com/gmod/Global.print
+ print( vararg args )
+
+https://wiki.facepunch.com/gmod/Global.PrintMessage
+ PrintMessage( number type, string message )
+
+https://wiki.facepunch.com/gmod/Global.PrintTable
+ PrintTable( table tableToPrint, number indent = 0, table done = {} )
+
+https://wiki.facepunch.com/gmod/Global.RealTime
+number RealTime()
+
+https://wiki.facepunch.com/gmod/Global.RecipientFilter
+CRecipientFilter RecipientFilter()
+
+https://wiki.facepunch.com/gmod/Global.require
+ require( string name )
+
+https://wiki.facepunch.com/gmod/Global.RunConsoleCommand
+ RunConsoleCommand( string command, vararg arguments )
+
+https://wiki.facepunch.com/gmod/Global.SetGlobalBool
+  SetGlobalBool( any index, boolean bool )
+
+https://wiki.facepunch.com/gmod/Global.SetGlobalEntity
+ SetGlobalEntity( any index, Entity ent )
+
+https://wiki.facepunch.com/gmod/Global.SetGlobalInt
+ SetGlobalInt( string index, number value )
+
+https://wiki.facepunch.com/gmod/Global.SetGlobalString
+ SetGlobalString( any index, string string )
+
+https://wiki.facepunch.com/gmod/Global.SysTime
+number SysTime()
+
+https://wiki.facepunch.com/gmod/Global.type
+string type( any var )
+
