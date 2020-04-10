@@ -2,4 +2,10 @@
 --include functions for creating and managing the table
 include( "server/songTable.lua" );
 
---create hook to watch the chat with
+--create hooks to watch the chat with
+--adding songs
+
+hook.Add("PlayerSay", "addsongtoqueue", addSong);
+
+--removing songs
+hook.Add("PlayerSay", "removesongfromqueue", removeSong);
