@@ -15,6 +15,3 @@ hook.Add("PlayerSay", "playeroptin", includePlayer);
 
 --removing players
 hook.Add("PlayerSay", "playeroptout", excludePlayer);
-
--- for testing only. Remove when done
-hook.Add("PlayerSay", "playerlistcheck", printPlayer);

@@ -9,7 +9,7 @@ function includePlayer( p, message, teamChat )
         --adding the player's userID to the table
         table.insert( players, p:UserID());
 
-        print ("Player ", p, " has been added!");
+        print ("Player ", p:Nick(), " has been added!");
     end
 end
 
@@ -17,25 +17,17 @@ end
 function excludePlayer( p, message, teamChat )
     if string.match(message, "!leaveradio") then
         -- need to loop through the table until we find the matching value
-        local thisPlayer = p:UserID();
         local key = nil
-        --to fix. loop currently doesn't work
-        for k,v in players(thisPlayer) do
-            if v==thisPlayer then key = k end
+
+        for k,v in ipairs(players) do
+            if v==p:UserID() then key = k end
         end
 
         if key == nil then 
-            print("player ", p:Nick(), "Has not opted in yet and cannot be removed");
+            print("player", p:Nick(), "Has not opted in yet and cannot be removed");
         else
             table.remove(songs, key);
-            print("Player ", p.Nick(), " has be removed!");
+            print("Player", p:Nick(), "has been removed!");
         end
     end
-end
-
-
-function printPlayer ( p, message, teamchat ) 
-    print(table.ToString(players));
-    print("test", p:Nick(), "test2", p:UserID() );
-    print( Player(3) );
 end
