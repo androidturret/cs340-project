@@ -1,3 +1,58 @@
+SERVER SIDE
+    Table control
+    songs table is basically an array with numbered keys and string values
+    -addsong
+        check to ensure text passed from the chat contains the command we want else do nothing
+        adds a song to the end of the queue
+        using table.insert( tablename, songstring ) where insert() without the third arguement of for the key always appends to the end of the table
+        need to remove the command from the string saved
+        later need to ensure link is a youtube link. DO NOT publish addon on workshop without this.
+    -removesong
+        check to ensure text passed from the chat contains the command we want else do nothing
+        removes the last song entered in the queue using table.remove(tablename, 1)
+          note that tables in lua always start from 1
+    -getsong
+        return the string for a song url given a key.
+    
+    users table is to keep track of anyone who actually wants to hear the music. Can only rickroll so many
+    - includePlayer
+        check to ensure text passed from the chat contains the command we want else do nothing
+        use the Player class functions to grab the UserID and insert that in the players table
+    - removePlayer
+        check to ensure text passed from the chat contains the command we want else do nothing
+        use the Player class functions to grab the UserID and search the players table for it
+            use a for loop to iterate through the table unless a better way is found
+        if player is found, delete the key from the table using table.remove(tablename, key)
+        if no player is found, print message to console(or chat in final version) that the player has not opted in
+
+    Chat Hooks
+        hook.Add("PlayerSay", "uniqueeventname", functiontocall); is a useful way to check the chat for commands if you don't want to create a whole ingame interface and keep things simple
+        Need a hook for each command. Have to keep each command phrase unique so not easy to say by accident
+        TO CONSIDER - figure out how to open in-game browser via command or add in functional menu or send chat message to players to use steam overlay browser to find songs
+
+        Commands
+            !addsong url
+            !removesong
+            !joinradio
+            !leaveradio
+            !play
+            !stop
+
+    PLayback
+        playSong
+            TODO
+            iterate through user table in a loop send them the url of the current song in the loop
+            find way to check if play back has ended
+                remove song from queue and play the next at top of the queue. send every song url out each time
+        stopSong
+            TODO
+            send signal to all users in user table to stop playing
+
+        Client-Server communication done through Net library https://wiki.facepunch.com/gmod/Net_Library_Usage
+        TODO - figure out how this works and test
+
+
+//OLDER VERSION BEYOND THIS POINT//
 //plan outline here
 
  - need to make a socket serverside clients all access to get website urls. Limit to youtube to start

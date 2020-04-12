@@ -1,0 +1,24 @@
+Kira Siganski - 200352511
+Topic: Sockets
+ - project is to use sockets to store and retrieve data between the server and client
+ - in this case a radio mod written for gmod where tables are used as the socket to hold html links send in by the user and later to send out from the server on the initiation of a play command.
+ - One major challenge was the lack of experience with lua and having to figure out the functions and lua implementation available in gmod. 
+ - testing had to be done in game
+
+ - If you want to try out what is currently working, you need to have gmod installed, then copy the 'myAddon' folder and all of it's contents to Steam\steamapps\common\GarrysMod\garrysmod\addons and boot up the game. once in game, all you need to do is "start new game," click the single player dropdown and change it to 2 or more players, and commands are entered by hitting the y key to type into chat.
+ hit ~ when in game on a map to bring up the console and see any output.
+
+
+ List of working commands
+ !joinradio -- adds player id of whoever entered the command into the players table
+ !leaveradio -- removes player id of whoever entered the command from the player table if they have a value in the table
+ !addsong htmllinkfromyoutube -- adds a song to the end of the queue in the songs table
+ !removesong -- removes a song from the beginning of the queue in the song table
+
+ to reproduce or create your own addon, look to the outline.txt for function and logic information, Gmod Useful Functions for a list of possible functions to use and links to their pages in the wiki.
+ https://steamcommunity.com/sharedfiles/filedetails/?id=144938866 - a quick start guide to lua
+ https://wiki.facepunch.com/gmod/Workshop_Addon_Creation - for creating and uploading an addon
+ https://www.lua.org/pil/contents.html for lua overview
+ https://wiki.facepunch.com/gmod/ - for everything implementable in gmod, also any addon on the workshop can be decompiled using gmad.exe which is found in Steam\steamapps\common\GarrysMod\bin. Just drag the .gma addon file over the executable and it'll decompile it for you.
+
+ 
